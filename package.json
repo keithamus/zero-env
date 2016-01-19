@@ -1,0 +1,23 @@
+{
+  "name": "zero-env",
+  "version": "0.0.0-development",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/keithamus/zero-env.git"
+  },
+  "scripts": {
+    "test": "node test.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "config": {
+    "ghooks": {
+      "commit-msg": "validate-commit-msg"
+    }
+  },
+  "devDependencies": {
+    "ghooks": "^1.0.1",
+    "semantic-release": "^4.3.5",
+    "travis-after-all": "^1.4.4",
+    "validate-commit-msg": "^1.0.0"
+  }
+}

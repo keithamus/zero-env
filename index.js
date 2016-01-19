@@ -19,7 +19,7 @@ module.exports = (function loadConfig(options) {
         if (currentConfigBlock.hasOwnProperty(currentKeyPart) === false) {
           currentConfigBlock[currentKeyPart] = typeof current === 'number' ? [] : {};
         }
-        if (typeof currentConfigBlock[currentKeyPart] === 'string') {
+        if (typeof currentConfigBlock[currentKeyPart] !== 'object') {
           currentConfigBlock[currentKeyPart] = {
             value: currentConfigBlock[currentKeyPart],
           };

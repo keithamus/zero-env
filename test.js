@@ -8,7 +8,9 @@ process.env = {
   'ALLCAPSTHING': 'true',
   'ALL_CAPS_THING': '20',
   'thing': 'this is a string',
-  'thing_foo': 'this is a sub-property?'
+  'thing_foo': 'this is a sub-property?',
+  'otherThing': '999',
+  'otherThing_foo': '888',
 };
 var config = require('./');
 var expected = {
@@ -39,7 +41,11 @@ var expected = {
   thing: {
     value: 'this is a string',
     foo: 'this is a sub-property?'
-  }
+  },
+  otherThing: {
+    value: 999,
+    foo: 888,
+  },
 };
 try {
   require('assert').deepEqual(config, expected);
